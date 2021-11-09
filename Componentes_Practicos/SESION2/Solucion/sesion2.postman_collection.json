@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "8f0d230b-e218-49ed-bf47-20cff56136df",
+		"name": "sesion2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic MjliYjM0ZDQwOWMxOjAwMmVmNDFmYWMwNTU4NDQ0NmI1NjRhNDU2NjA2ZWRhNDg5NTA3ZjA1MQ==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.backblazeb2.com/b2api/v2/b2_authorize_account",
+					"protocol": "https",
+					"host": [
+						"api",
+						"backblazeb2",
+						"com"
+					],
+					"path": [
+						"b2api",
+						"v2",
+						"b2_authorize_account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "4_00229bb34d409c10000000000_01a032ce_ca718a_acct_Tf8eK3i__YyZstoBNIeuoewseNY=",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bucketId\": \"22f97b4be3b40d4470d90c11\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api002.backblazeb2.com/b2api/v2/b2_get_upload_url",
+					"protocol": "https",
+					"host": [
+						"api002",
+						"backblazeb2",
+						"com"
+					],
+					"path": [
+						"b2api",
+						"v2",
+						"b2_get_upload_url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "4_00229bb34d409c10000000000_01a032e8_ae6399_upld_89xkQrxdUL0dgKNe6CJk0rGcJ7I=",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/octet-stream",
+						"type": "text"
+					},
+					{
+						"key": "Content-Lenght",
+						"value": "68",
+						"type": "text"
+					},
+					{
+						"key": "X-Bz-File-Name",
+						"value": "test.txt",
+						"type": "text"
+					},
+					{
+						"key": "X-Bz-Content-Sha1",
+						"value": "6bae65394ade1f46fb999539316bef62c4deff00",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "fj9z1fjbC/test.txt"
+					}
+				},
+				"url": {
+					"raw": "https://pod-000-1114-04.backblaze.com/b2api/v2/b2_upload_file/22f97b4be3b40d4470d90c11/c002_v0001114_t0021",
+					"protocol": "https",
+					"host": [
+						"pod-000-1114-04",
+						"backblaze",
+						"com"
+					],
+					"path": [
+						"b2api",
+						"v2",
+						"b2_upload_file",
+						"22f97b4be3b40d4470d90c11",
+						"c002_v0001114_t0021"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
